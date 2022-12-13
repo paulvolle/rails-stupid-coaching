@@ -1,0 +1,16 @@
+<h1 class="text-center">Stupid coaching - Answer</h1>
+<br>
+<ul>
+  <% if params[:question].ends_with?("?") %>
+    <li><%= "Your stupid coach -" %>
+    <%= @coach_answers[0] %></li>
+    <% elsif params[:question] == "I am going to work" %>
+    <li><%= "Your stupid coach -" %>
+    <%= @coach_answers[1] %></li>
+    <% else %>
+    <li><%= puts "Your stupid coach -" %>
+    <%= @coach_answers[2] %></li>
+    <% end %>
+</ul>
+
+<%= link_to "Ask another question", ask_path %>
